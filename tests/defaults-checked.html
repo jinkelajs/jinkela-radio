@@ -1,0 +1,22 @@
+<meta charset="utf-8" />
+<script src="/tester.js"></script>
+<script src="jinkela.js"></script>
+<script src="/Radio.js"></script>
+<script>
+addEventListener('load', () => {
+
+  Tester.log('defaults checked');
+  let b = new Radio({ text: 'hehe', checked: true }).to(document.body);
+  Tester.assert(b.element.querySelector('.active'), 'active must be included');
+  Tester.assert(b.checked === true, 'b.checked must be true');
+  b.element.dispatchEvent(new MouseEvent('click'));
+  Tester.assert(b.element.querySelector('.active'), 'active must be included');
+  Tester.assert(b.checked === true, 'b.checked must be true');
+  Tester.assert(b.readonly === false, 'b.readonly must be false');
+  b.readonly = true;
+  b.element.dispatchEvent(new MouseEvent('click'));
+  Tester.assert(b.checked === true, 'b.checked must be true');
+  Tester.feedback(true);
+
+});
+</script>
