@@ -14,7 +14,7 @@ npm install jinkela-radio
   * `text` **String** The default text.
   * `readonly` **Boolean** The readonly flag.
 
-## Demo [Live](https://jinkelajs.github.io/jinkela-radio/example.html)
+## Demo [Live](https://jinkelajs.github.io/jinkela-radio/example/)
 
 ```html
 <meta charset="utf-8" />
